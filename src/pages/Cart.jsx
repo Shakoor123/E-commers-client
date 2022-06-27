@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Navbar from '../components/Navbar/Navbar'
 import Anouncement from '../components/Anouncement/Anouncement'
 import Footer from '../components/footer/Footer'
+import { Add, Remove } from '@mui/icons-material'
 
 
 const Container=styled.div``
@@ -44,9 +45,96 @@ display: flex;
  flex: 3;
  `
 const Summery=styled.div`
-flex: 1;
+border: 0.5px solid lightgray;
+border-radius: 10px;
+padding: 20px;
+height: 50vh;
 `
-// const Container=styled.div``
+const Product=styled.div`
+display: flex;
+justify-content: space-between;
+
+`
+const ProductDetails=styled.div`
+flex: 3;
+display: flex;
+`
+const Image=styled.img`
+padding:20px;
+width: 200px;
+
+`
+const Details=styled.div`
+padding: 20px;display: flex;
+flex-direction: column;    
+justify-content: space-around;
+
+`
+const ProductName=styled.span`
+
+`
+const ProductId=styled.span`
+
+`
+const ProductColor=styled.div`
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background-color:${props=>props.color};
+
+`
+const ProductSize=styled.span``
+
+const PriceDetails=styled.div`
+flex: 1;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+
+`
+const ProductAmountContainer=styled.div`
+display: flex;
+align-items: center;
+
+
+`
+const ProductAmount=styled.div`
+font-size: 24px;
+margin: 10px;
+`
+const ProductPrice=styled.div`
+
+font-size: 30px;
+font-weight: 200;
+
+`
+const Hr=styled.hr`
+background-color: lightgray;
+border: none;
+height: 1px;
+
+`
+const SummeryTitle=styled.h1`
+font-weight: 200;
+`
+const SummeryItem=styled.div`
+margin: 30px 0px;
+display: flex;
+justify-content: space-between;`
+const SummeryItemText=styled.span`
+`
+const SummeryItemPrice=styled.span``
+const Button=styled.button`
+width: 100%;
+padding: 10px;
+background-color: black;
+color: white;
+font-weight: 600;
+cursor:pointer;
+`
+
+
 
 
 const Cart = () => {
@@ -68,10 +156,49 @@ const Cart = () => {
         </Top>
         <Bottom>
           <Info>
-            info
+            <Product>
+              <ProductDetails>
+                <Image src="https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+                <Details>
+                  <ProductName><b>Product : </b>Car Washer</ProductName>
+                  <ProductId><b> Id: </b>9995559990</ProductId>
+                  <ProductColor color='black'/> 
+                  <ProductColor color='blue'/> 
+                  <ProductColor color='green'/> 
+                    <ProductSize><b> size: </b>10</ProductSize>
+                </Details>
+              </ProductDetails>
+              <PriceDetails>
+                <ProductAmountContainer>
+                  <Add/>
+                    <ProductAmount>3</ProductAmount>
+                  <Remove/>
+                </ProductAmountContainer>
+                <ProductPrice>RS 3000</ProductPrice>
+              </PriceDetails>
+            </Product>
+            <Hr></Hr>
           </Info>
           <Summery>
-            summery
+            <SummeryTitle>
+              ORDER Summery
+            </SummeryTitle>
+            <SummeryItem>
+              <SummeryItemText>SubTotal</SummeryItemText>
+              <SummeryItemPrice>Rs : 30</SummeryItemPrice>
+
+            </SummeryItem>
+            <SummeryItem>
+              <SummeryItemText>SubTotal</SummeryItemText>
+              <SummeryItemPrice>Rs : 30</SummeryItemPrice>
+
+            </SummeryItem>
+            <SummeryItem>
+              <SummeryItemText>SubTotal</SummeryItemText>
+              <SummeryItemPrice>Rs : 30</SummeryItemPrice>
+
+            </SummeryItem>
+            <Button>Check out Now</Button>
           </Summery>
         </Bottom>
       </Wrapper>
