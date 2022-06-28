@@ -1,7 +1,7 @@
 .navbar{
     height: 60px;
 }
-.wrapper{
+.wrappern{
     display: flex;
     padding: 10px 20px;
     justify-content: space-between;
@@ -17,7 +17,13 @@ flex: 1;
 .left{
     display: flex;
     align-items: center;
+    
 }
+@media only screen and (max-width: 450px) {
+    .left {
+      display: none;
+    }
+  }
 .right{
     display: flex;
     align-items: center;
@@ -37,7 +43,7 @@ flex: 1;
 .input{
     border: none;
 }
-.button{
+.buttonn{
     margin-right: 25px;
     cursor: pointer;
     padding: 5px;

@@ -1,8 +1,17 @@
-import { Facebook, Instagram, MailOutline, Phone, Room, Twitter } from "@mui/icons-material";
+import {
+  Facebook,
+  Instagram,
+  MailOutline,
+  Phone,
+  Room,
+  Twitter,
+} from "@mui/icons-material";
 import styled from "styled-components";
-
+import {mobile} from '../../responsive'
 const Container = styled.div`
   display: flex;
+  ${mobile({flexDirection:"column"})}
+
 `;
 
 const Left = styled.div`
@@ -32,12 +41,14 @@ const SocialIcon = styled.div`
   align-items: center;
   justify-content: center;
   margin-right: 20px;
-  cursor:pointer;
+  cursor: pointer;
 `;
 
 const Center = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({display:"none"})}
+
 `;
 
 const Title = styled.h3`
@@ -60,6 +71,8 @@ const ListItem = styled.li`
 const Right = styled.div`
   flex: 1;
   padding: 20px;
+  ${mobile({backgroundColor:"lightgray"})}
+
 `;
 
 const ContactItem = styled.div`
@@ -69,7 +82,7 @@ const ContactItem = styled.div`
 `;
 
 const Payment = styled.img`
-    width: 50%;
+  width: 50%;
 `;
 
 const Footer = () => {
@@ -78,11 +91,14 @@ const Footer = () => {
       <Left>
         <Logo>E-commers.</Logo>
         <Desc>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi corrupti tenetur nemo numquam est aperiam quas sunt dolore excepturi velit neque earum qui explicabo nesciunt enim possimus, quisquam autem. Illo!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+          corrupti tenetur nemo numquam est aperiam quas sunt dolore excepturi
+          velit neque earum qui explicabo nesciunt enim possimus, quisquam
+          autem. Illo!
         </Desc>
         <SocialContainer>
           <SocialIcon color="3B5999">
-            <Facebook/>
+            <Facebook />
           </SocialIcon>
           <SocialIcon color="E4405F">
             <Instagram />
@@ -110,13 +126,14 @@ const Footer = () => {
       <Right>
         <Title>Contact</Title>
         <ContactItem>
-          <Room style={{marginRight:"10px"}}/> 622 Dixie Path , South Tobinchester 98336
+          <Room style={{ marginRight: "10px" }} /> 622 Dixie Path , South
+          Tobinchester 98336
         </ContactItem>
         <ContactItem>
-          <Phone style={{marginRight:"10px"}}/> +1 234 56 78
+          <Phone style={{ marginRight: "10px" }} /> +1 234 56 78
         </ContactItem>
         <ContactItem>
-          <MailOutline style={{marginRight:"10px"}} /> contact@lama.dev
+          <MailOutline style={{ marginRight: "10px" }} /> contact@lama.dev
         </ContactItem>
         <Payment src="https://i.ibb.co/Qfvn4z6/payment.png" />
       </Right>

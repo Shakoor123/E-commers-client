@@ -1,5 +1,5 @@
-import { BadgeOutlined, Search } from '@mui/icons-material'
-import { Badge, BadgeMark, BadgeRoot } from '@mui/material'
+import {  Search } from '@mui/icons-material'
+import { Badge} from '@mui/material'
 import React from 'react'
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import './Navbar.css'
@@ -8,7 +8,7 @@ import './Navbar.css'
 const Navbar = () => {
   return (
     <div className='navbar'>
-        <div className="wrapper">
+        <div className="wrappern">
           <div className="left">
             <span className='span'>EN</span>
             
@@ -23,8 +23,8 @@ const Navbar = () => {
             </h1>
           </div>
           <div className="right">
-            <span className="button">REGISTER</span>
-            <span className="button">LOG_IN</span>
+            <span className="buttonn">REGISTER</span>
+            <span className="buttonn">LOG_IN</span>
             <Badge badgeContent={4} color='primary'>
             <ShoppingCartOutlinedIcon/>
 

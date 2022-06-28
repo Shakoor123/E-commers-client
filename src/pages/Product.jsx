@@ -4,10 +4,13 @@ import styled from 'styled-components'
 import Anouncement from '../components/Anouncement/Anouncement'
 import Footer from '../components/footer/Footer'
 import Navbar from '../components/Navbar/Navbar'
-
+import { mobile } from '../responsive'
 const Wrapper=styled.div`
-padding:50px;
-display:flex;`
+padding:20px;
+display:flex;
+${mobile({flexDirection:"column"})} 
+
+`
 const ImageContainer=styled.div`
 flex:1;`
 const Image=styled.img`
@@ -16,7 +19,10 @@ height:90vh;
 object-fit:cover;`
 const InfoContainer=styled.div`
 padding:0 50px;
-flex:1;`
+flex:1;
+${mobile({padding:"10px"})} 
+
+`
 const Title=styled.h1`
 font-weight:300px;`
 const Desc=styled.p`
@@ -48,7 +54,6 @@ margin-left: 10px;
 padding: 5px;`
 
 const FilterSiizeOption=styled.option``
-const FilterSizeOption = styled.option``;
 
 const AddContainer = styled.div`
   width: 50%;
